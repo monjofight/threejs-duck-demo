@@ -6,7 +6,7 @@ https://threejs-duck-demo.vercel.app/
 
 ## 概要
 
-このプロジェクトは、Three.js を使用して 3D アニメーションを作成する方法を示すデモンストレーションです。
+このプロジェクトは、Three.js の勉強と Blender を使用して 3D モデルの作成の勉強のために作成しています。
 
 ## 使用技術
 
@@ -15,10 +15,7 @@ https://threejs-duck-demo.vercel.app/
 - Next.js：サーバーレンダリング React フレームワーク。
 - TypeScript：静的型付け言語。
 - Three.js：WebGL ベースの 3D グラフィックスライブラリ。
-
-## 主な機能
-
-- 3D モデルの読み込みと表示
+- Blender：3D モデルのモデリング
 
 ## セットアップ手順
 

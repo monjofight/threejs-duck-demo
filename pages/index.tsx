@@ -1,33 +1,28 @@
-import { Box, VStack, Heading, ListItem, UnorderedList, Link as ChakraLink } from '@chakra-ui/react';
+import { Box, Heading, ListItem, UnorderedList, Link as ChakraLink } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
 const Home = () => {
   const router = useRouter();
-  const handleClick = (href: string) => {
-    router.push(href);
-  };
+  const handleClick = (href: string) => router.push(href);
 
   return (
-    <Box textAlign="center" fontSize="xl">
-      <VStack spacing={8} padding={5}>
-        <Heading as="h1" size="2xl" marginBottom="1rem" color="teal.500">
-          ページ一覧
-        </Heading>
-        <UnorderedList spacing={8} textAlign="left" marginLeft="auto" marginRight="auto" listStyleType="none">
-          <ListItem>
-            <ChakraLink href="#" onClick={() => handleClick('/duck')} padding="8px" borderRadius="md" backgroundColor="pink.200" _hover={{ textDecoration: 'none', backgroundColor: 'pink.300' }}>
-              ニワトリ
+    <Box textAlign="center">
+      <Heading as="h1" size="2xl" marginBottom="1rem">
+        ページ一覧
+      </Heading>
+      <UnorderedList listStyleType="none">
+        {['/duck', '/mofumofu', '/maru'].map((href, index) => (
+          <ListItem key={index}>
+            <ChakraLink href="#" onClick={() => handleClick(href)}>
+              {titles[index]}
             </ChakraLink>
           </ListItem>
-          <ListItem>
-            <ChakraLink href="#" onClick={() => handleClick('/mofumofu')} padding="8px" borderRadius="md" backgroundColor="purple.200" _hover={{ textDecoration: 'none', backgroundColor: 'purple.300' }}>
-              モフモフ
-            </ChakraLink>
-          </ListItem>
-        </UnorderedList>
-      </VStack>
+        ))}
+      </UnorderedList>
     </Box>
   );
 };
+
+const titles = ['ニワトリ', 'モフモフ', 'かわいいキャラ'];
 
 export default Home;
