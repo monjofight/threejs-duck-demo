@@ -2,7 +2,7 @@
 
 ## デモサイト
 
-https://threejs-duck-demo.vercel.app/
+https://threejs-3d-model-study.vercel.app/
 
 ## 概要
 
